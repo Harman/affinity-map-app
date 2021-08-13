@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+.myApp {
+  height: 100vh;
+  width: 100vw;
+}
+
+.grid {
+  min-height: 80%;
+  width: 100vw;
+  background-color: #e1e5ea;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.modal-container {
+  height: 20rem;
+  width: 35rem;
+  border: 2px solid;
+  position: fixed;
+  display: flex;
+  top: calc((100vh - 20rem) / 2);
+  left: calc((100vw - 35rem) / 2);
+  box-shadow: 0px 5px 8px 0px #aaa;
+  z-index: 12;
+}
+
+.text-area {
+  height: 100%;
+  width: 75%;
+  background-color: white;
+  outline: none;
+  padding: 2rem;
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.side-area {
+  width: 35%;
+  background-color: #444444;
+}
+
+.color-area {
+  border: 2px solid white;
+  height: 90%;
+}
+
+.color-tag,
+.submit-tag {
+  height: 10%;
+  width: 60%;
+  margin: auto;
+  margin-top: 1.1rem;
+}
+.color-tag:hover {
+  opacity: 60%;
+}
+
+.pink {
+  background-color: #f8485e;
+}
+
+.blue {
+  background-color: #78dec7;
+}
+
+.purple {
+  background-color: #b980f0;
+}
+
+.green {
+  background-color: #71efa3;
+}
+
+.orange {
+  background-color: #fde49c;
+}
+
+.selected-state,
+.active-color {
+  border: 4px solid rgb(49, 140, 245);
+}
+
+.ticket {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 8;
+}
+
+.ticket-grp {
+  height: 12%;
+  width: 80%;
+  background-color: #444444;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-top: 0px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f5f0f0;
+}
+
+.ticketMoveBtn {
+    height:15%;
+    width: 15%;
+    text-align: center;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+.ticket-id {
+  height: 10%;
+  width: 100%;
+  padding-left: 0px;
+  padding-top: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #aaa2a2;
+}
+
+.ticket-box {
+  height: 70%;
+  width: 100%;
+  overflow: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  outline: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 5px;
+  color: #444444;
+}
+
+.tag-modal {
+  height: 20rem;
+  width: 35rem;
+  border: 2px solid;
+  position: fixed;
+  display: flex;
+  top: calc((100vh - 20rem) / 2);
+  left: calc((100vw - 35rem) / 2);
+  box-shadow: 0px 5px 8px 0px #aaa;
+  z-index: 12;
+}
+
+.all-tags {
+  height: 100%;
+  width: 80%;
+  border: 2px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 1.5rem;
+}
+
+.all-tags > div {
+  background-color: #444444;
+  height: 12%;
+  padding: 2px;
+  color: white;
+  display: flex;
+}
+
+.info-modal {
+  height: 30rem;
+  width: 40rem;
+  margin: auto;
+  position: fixed;
+  top: calc((100vh - 30rem) / 2);
+  left: calc((100vw - 40rem) / 2);
+  box-shadow: 0px 5px 8px 0px #aaa;
+  z-index: 12;
+}
+
+.info-area {
+  border: 2px solid;
+  height: 90%;
+  overflow: auto;
+  color: white;
+  padding: 5px;
+}
+
+.info-modal > div {
+  background-color: #444444;
+  text-align: center;
+}
+.info-modal > .d2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 4px;
+}
+
+.info-area > div > ul > li {
+  padding: 5px;
+}
+
+.bucket {
+  height: 10rem;
+  width: 10rem;
+  background-color: rgb(185, 174, 174);
+  resize: both;
+  overflow: auto;
+  padding: 5px;
+  box-shadow: 0px 5px 8px 0px #aaa;
+  position: relative;
+  z-index: 8;
+}
+
+.bucket > div {
+    display: flex;
+}
+
+.bucket > div > button {
+    padding: 5px;
+    position: relative;
+    right: 3px;
+}
+
+.buck-heading {
+  height: fit-content;
+  width: 70%;
+  background-color: white;
+  border: 2px solid;
+  text-align: center;
+}
+
+.grp-modal {
+  height: 7rem;
+  width: 30rem;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #444444;
+  margin: auto;
+  position: fixed;
+  top: calc((100vh - 7rem) / 2);
+  left: calc((100vw - 30rem) / 2);
+  box-shadow: 0px 5px 8px 0px #aaa;
+  z-index: 12;
+  border-radius: 5px;
+}
+
+
+.grp-modal-inner {
+  height: 80%;
+  width: 80%;
+  background-color: white;
+}
