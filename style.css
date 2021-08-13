@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  overflow: auto;
 }
 .myApp {
   height: 100vh;
@@ -18,6 +19,8 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 1.5rem;
+  overflow: auto;
+  resize: both;
 }
 
 .modal-container {
@@ -29,7 +32,7 @@ body {
   top: calc((100vh - 20rem) / 2);
   left: calc((100vw - 35rem) / 2);
   box-shadow: 0px 5px 8px 0px #aaa;
-  z-index: 12;
+  z-index: 15;
 }
 
 .text-area {
@@ -152,7 +155,7 @@ body {
   top: calc((100vh - 20rem) / 2);
   left: calc((100vw - 35rem) / 2);
   box-shadow: 0px 5px 8px 0px #aaa;
-  z-index: 12;
+  z-index: 15;
 }
 
 .all-tags {
@@ -181,7 +184,7 @@ body {
   top: calc((100vh - 30rem) / 2);
   left: calc((100vw - 40rem) / 2);
   box-shadow: 0px 5px 8px 0px #aaa;
-  z-index: 12;
+  z-index: 15;
 }
 
 .info-area {
@@ -250,13 +253,26 @@ body {
   top: calc((100vh - 7rem) / 2);
   left: calc((100vw - 30rem) / 2);
   box-shadow: 0px 5px 8px 0px #aaa;
-  z-index: 12;
+  z-index: 15;
   border-radius: 5px;
 }
-
 
 .grp-modal-inner {
   height: 80%;
   width: 80%;
   background-color: white;
+}
+
+.zoominBtn, .zoomoutBtn {
+  position: fixed;
+  z-index: 14;
+  top: 5.5rem;
+}
+
+.zoominBtn {
+  left: 40rem;
+}
+
+.zoomoutBtn {
+  left: 45rem;
 }

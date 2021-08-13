@@ -5,6 +5,12 @@ let addBtn = document.querySelector(".addBtn");
 let deleteBtn = document.querySelector(".deleteBtn");
 let infoBtn = document.querySelector(".infoBtn");
 let grpHighlightBtn = document.querySelector(".grp-highlights");
+let zoominBtn = document.querySelector(".zoominBtn");
+let zoomoutBtn = document.querySelector(".zoomoutBtn");
+
+let minZoom = 0.2;
+let maxZoom = 1.7;
+let currZoom = 1;
 
 let addBtnState = false;
 let deleteBtnState = false;
@@ -32,11 +38,32 @@ fillTags();
 attachEventListners();
 
 function attachEventListners() {
+  zoomEvents();
   grpTaskEvent();
   selectMainEvent();
   deleteBtnEvents();
   addBtnEvents();
   infoBtnEvent();
+}
+
+function zoomEvents() {
+  zoominBtn.addEventListener("click", function() {
+    if(currZoom < maxZoom) {
+      currZoom = currZoom + 0.1;
+    }
+    grid.style.transform = `scale(${currZoom})`;
+    grid.style.transformOrigin = "0 0";
+  });
+
+  zoomoutBtn.addEventListener("click", function() {
+    zoomoutBtn.addEventListener("click", function() {
+      if(currZoom > minZoom) {
+        currZoom = currZoom - 0.1;
+      }
+      grid.style.transform = `scale(${currZoom})`;
+      grid.style.transformOrigin = "0 0";
+    });
+  });
 }
 
 function grpTaskEvent() {
@@ -122,6 +149,8 @@ function infoBtnEvent() {
             <li>New Tags are automatically added when creating the highlight, unique ids and tags are uneditable</li>
             <li>Highlights' textual content itself is editable and all changes made are saved automatically.</li>
             <li>Buckets can be created using "Group Highlights" button, Buckets can be resized and required highlights can be dragged and place over them.</li>
+            <li><span class="material-icons"> zoom_in </span><span class="material-icons"> zoom_out </span> can be used to zoom in and out of our map.</li>
+            <li>To resize the map or buckets use the "Bottom right corner".</li>
             <li>The highlights and buckets are stored in local storage, therefore are availabe even after reloading the website.</li>
         </ul>
     </div>
