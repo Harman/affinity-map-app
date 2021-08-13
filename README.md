@@ -16,3 +16,6 @@ This is a front-end app made using javascript, html, css and bootstrap. It allow
 - Both buckets and our main whiteboard/grid are resize able to accommodate new buckets/notes. To resize them use the bottom left corner and resize according to your desire.
 - Finally all the notes/buckets are stored in the local storage of user's browser and are available even after reloading the website. Any change made in the notes are instantly reflected in the local storage.
 - Future ideas: Every note have a unique id which can be replaced by unique user id to distinguish between notes by different users.
+
+## Known Bug
+- When zooming out of the grid, it breaks postioning code of the dragging notes/buckets part, due to which the notes/ buckets are not at current cursor position.
