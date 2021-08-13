@@ -125,12 +125,12 @@ body {
 .ticket-id {
   height: 10%;
   width: 100%;
-  padding-left: 0px;
-  padding-top: 5px;
+  padding-left: 3px;
+  padding-top: 3px;
   font-size: 16px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
-  color: #aaa2a2;
+  color: #cec2c2;
 }
 
 .ticket-box {

@@ -462,6 +462,11 @@ function dragElement1(ticket, tktMovBtn) {
       grid.removeEventListener("mousemove", onMouseMove);
       ticket.onmouseup = null;
     };
+
+    document.onmouseup = function () {
+      grid.removeEventListener("mousemove", onMouseMove);
+      ticket.onmouseup = null;
+    };
   };
 
   ticket.ondragstart = function () {
@@ -500,6 +505,11 @@ function dragElement2(buck, moveBtn) {
     grid.onmouseup = function () {
       grid.removeEventListener("mousemove", onMouseMove);
       buck.onmouseup = null;
+    };
+
+    document.onmouseup = function () {
+      grid.removeEventListener("mousemove", onMouseMove);
+      ticket.onmouseup = null;
     };
   };
 
