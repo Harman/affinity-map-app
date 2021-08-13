@@ -451,10 +451,15 @@ function dragElement1(ticket, tktMovBtn) {
       moveAt(event.pageX, event.pageY);
     }
 
-    document.addEventListener("mousemove", onMouseMove);
+    grid.addEventListener("mousemove", onMouseMove);
 
     ticket.onmouseup = function () {
-      document.removeEventListener("mousemove", onMouseMove);
+      grid.removeEventListener("mousemove", onMouseMove);
+      ticket.onmouseup = null;
+    };
+
+    grid.onmouseup = function () {
+      grid.removeEventListener("mousemove", onMouseMove);
       ticket.onmouseup = null;
     };
   };
@@ -485,10 +490,15 @@ function dragElement2(buck, moveBtn) {
       moveAt(event.pageX, event.pageY);
     }
 
-    document.addEventListener("mousemove", onMouseMove);
+    grid.addEventListener("mousemove", onMouseMove);
 
     buck.onmouseup = function () {
-      document.removeEventListener("mousemove", onMouseMove);
+      grid.removeEventListener("mousemove", onMouseMove);
+      buck.onmouseup = null;
+    };
+
+    grid.onmouseup = function () {
+      grid.removeEventListener("mousemove", onMouseMove);
       buck.onmouseup = null;
     };
   };
