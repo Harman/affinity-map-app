@@ -436,7 +436,9 @@ function dragElement1(ticket, tktMovBtn) {
     let shiftX = event.clientX - ticket.getBoundingClientRect().left;
     let shiftY = event.clientY - ticket.getBoundingClientRect().top;
 
-    ticket.style.position = "absolute";
+    console.log(shiftX + "  <->  " + shiftY);
+
+    ticket.style.position = "fixed";
     ticket.style.zIndex = 10;
     grid.append(ticket);
 
@@ -461,11 +463,13 @@ function dragElement1(ticket, tktMovBtn) {
     grid.onmouseup = function () {
       grid.removeEventListener("mousemove", onMouseMove);
       ticket.onmouseup = null;
+      grid.onmouseup = null;
     };
 
     document.onmouseup = function () {
       grid.removeEventListener("mousemove", onMouseMove);
       ticket.onmouseup = null;
+      document.onmouseup = null;
     };
   };
 
@@ -505,11 +509,13 @@ function dragElement2(buck, moveBtn) {
     grid.onmouseup = function () {
       grid.removeEventListener("mousemove", onMouseMove);
       buck.onmouseup = null;
+      grid.onmouseup = null;
     };
 
     document.onmouseup = function () {
       grid.removeEventListener("mousemove", onMouseMove);
       ticket.onmouseup = null;
+      document.onmouseup = null;
     };
   };
 
