@@ -53,7 +53,7 @@ function zoomEvents() {
     }
     grid.style.transform = `scale(${currZoom})`;
     grid.style.transformOrigin = "0 0";
-    console.log("in-> ", currZoom);
+    // console.log("in-> ", currZoom);
   });
 
   zoomoutBtn.addEventListener("click", function () {
@@ -62,7 +62,7 @@ function zoomEvents() {
     }
     grid.style.transform = `scale(${currZoom})`;
     grid.style.transformOrigin = "0 0";
-    console.log("out -> ", currZoom);
+    // console.log("out -> ", currZoom);
   });
 }
 
@@ -98,7 +98,7 @@ function grpTaskEvent() {
     let subgrpBtn = grpModal.querySelector(".sub-grp");
     subgrpBtn.addEventListener("click", function () {
       let inp = grpModal.querySelector(".grp-inp");
-      console.log(inp.value);
+      // console.log(inp.value);
       let buckName = inp.value;
       let buckKey = buckName.split(" ").join("-");
       if (buckName != "") {
@@ -472,7 +472,7 @@ function dragElement2(buck, moveBtn) {
 
     buck.style.position = "absolute";
     buck.style.zIndex = 7;
-    document.body.append(buck);
+    grid.append(buck);
 
     moveAt(event.pageX, event.pageY);
 
