@@ -47,22 +47,20 @@ function attachEventListners() {
 }
 
 function zoomEvents() {
-  zoominBtn.addEventListener("click", function() {
-    if(currZoom < maxZoom) {
+  zoominBtn.addEventListener("click", function () {
+    if (currZoom < maxZoom) {
       currZoom = currZoom + 0.1;
     }
     grid.style.transform = `scale(${currZoom})`;
     grid.style.transformOrigin = "0 0";
   });
 
-  zoomoutBtn.addEventListener("click", function() {
-    zoomoutBtn.addEventListener("click", function() {
-      if(currZoom > minZoom) {
-        currZoom = currZoom - 0.1;
-      }
-      grid.style.transform = `scale(${currZoom})`;
-      grid.style.transformOrigin = "0 0";
-    });
+  zoomoutBtn.addEventListener("click", function () {
+    if (currZoom > minZoom) {
+      currZoom = currZoom - 0.1;
+    }
+    grid.style.transform = `scale(${currZoom})`;
+    grid.style.transformOrigin = "0 0";
   });
 }
 
