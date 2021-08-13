@@ -19,3 +19,6 @@ This is a front-end app made using javascript, html, css and bootstrap. It allow
 
 ## Known Bug
 - When zooming out of the grid, it breaks postioning code of the dragging notes/buckets part, due to which the notes/ buckets are not at current cursor position.
+
+### Screenshot of app
+![image](https://user-images.githubusercontent.com/64087434/129306881-fceccf18-fe17-4fa3-9572-cb8879e11873.png)
