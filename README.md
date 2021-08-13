@@ -1,5 +1,6 @@
 # Affinity Map App
 This is a front-end app made using javascript, html, css and bootstrap. It allows user to organize various sticky notes on the screen.
+Deployment can be found here: https://harman.github.io/affinity-map-app/
 
 ### Basic features are:
 - Sticky notes can be dragged and placed anywhere on the screen using the drag button on top left corner of each note.
