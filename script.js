@@ -53,6 +53,7 @@ function zoomEvents() {
     }
     grid.style.transform = `scale(${currZoom})`;
     grid.style.transformOrigin = "0 0";
+    console.log("in-> ", currZoom);
   });
 
   zoomoutBtn.addEventListener("click", function () {
@@ -61,6 +62,7 @@ function zoomEvents() {
     }
     grid.style.transform = `scale(${currZoom})`;
     grid.style.transformOrigin = "0 0";
+    console.log("out -> ", currZoom);
   });
 }
 
