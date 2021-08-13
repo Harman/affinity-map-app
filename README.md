@@ -17,8 +17,10 @@ This is a front-end app made using javascript, html, css and bootstrap. It allow
 - Finally all the notes/buckets are stored in the local storage of user's browser and are available even after reloading the website. Any change made in the notes are instantly reflected in the local storage.
 - Future ideas: Every note have a unique id which can be replaced by unique user id to distinguish between notes by different users.
 
-## Known Bug
+## Known Bug {BEWARE}
 - When zooming out of the grid, it breaks postioning code of the dragging notes/buckets part, due to which the notes/ buckets are not at current cursor position.
+- I implemented the dragging algorithm before the zoom one. Due to which when zooming in or out, it affects the element' s postioning on the screen and this weired bug occurs.
+- Currently trying to understand how postioning works and all the functions related to retrieving an element's coordinates and also how transform changes scale. Have to write the dragging code from zero again, will be fixed soon(tm).....
 
 ### Screenshot of app
 ![image](https://user-images.githubusercontent.com/64087434/129306881-fceccf18-fe17-4fa3-9572-cb8879e11873.png)
