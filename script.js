@@ -436,7 +436,7 @@ function dragElement1(ticket, tktMovBtn) {
     let shiftX = event.clientX - ticket.getBoundingClientRect().left;
     let shiftY = event.clientY - ticket.getBoundingClientRect().top;
 
-    console.log(shiftX + "  <->  " + shiftY);
+    // console.log(shiftX + "  <->  " + shiftY);
 
     ticket.style.position = "fixed";
     ticket.style.zIndex = 10;
