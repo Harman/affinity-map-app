@@ -106,11 +106,7 @@ function grpTaskEvent() {
         localStorage.setItem("buckets", JSON.stringify(allBuckets));
         inp.value = "";
 
-        let allB = document.querySelectorAll(".bucket");
-        if (allB != undefined) {
-          for (let i = 0; i < allB.length; i++) allB[i].remove();
-        }
-        renderBuckets();
+        renderSingleBucket(buckKey);
         grpModal.remove();
       }
     });
@@ -391,6 +387,29 @@ function fillTags() {
     op.value = key;
     selectMain.appendChild(op);
   });
+}
+
+function renderSingleBucket(key) {
+  let buck = document.createElement("div");
+  buck.classList.add("bucket");
+  buck.classList.add(key);
+  buck.innerHTML = `<div><div class="buck-heading">${allBuckets[key]}</div><button class="btn btn-secondary buckDelBtn"><span class="material-icons">delete</span></button><button class="btn btn-secondary buckMoveBtn"><span class="material-icons">
+  touch_app
+  </span>
+  </button></div>`;
+  let del = buck.querySelector(".buckDelBtn");
+
+  del.addEventListener("click", function (e) {
+    let v = e.currentTarget.parentElement.parentElement.classList[1];
+    removeFromAllB(v);
+    buck.remove();
+  });
+
+  let movBtn = buck.querySelector(".buckMoveBtn");
+
+  dragElement2(buck, movBtn);
+
+  grid.appendChild(buck);
 }
 
 function renderBuckets() {
