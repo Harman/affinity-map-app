@@ -26,7 +26,3 @@ Deployment can be found here: https://harman.github.io/affinity-map-app/
 
 ### Screenshot of app
 ![image](https://user-images.githubusercontent.com/64087434/129306881-fceccf18-fe17-4fa3-9572-cb8879e11873.png)
-
-
-## Brief Working and run through of the code 
-https://user-images.githubusercontent.com/64087434/129329423-d6145f61-084a-484d-af6b-27c3379b5c4f.mp4
